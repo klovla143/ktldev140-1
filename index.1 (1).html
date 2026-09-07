@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ka'Deem Lovelace personal IT and cloud security portfolio.">
+  <title>Ka'Deem Lovelace | Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div>
+        <h1>Ka'Deem Lovelace</h1>
+        <p class="subtitle">Future Cloud Security Engineer</p>
+      </div>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
+        <span class="sr-only">Toggle navigation</span>
+        Menu
+      </button>
+      <nav id="site-navigation" aria-label="Primary navigation">
+        <ul class="nav-links">
+          <li><a class="current" href="index.html" aria-current="page">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="about.html">About & Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section id="hero" class="hero section-card">
+      <div class="hero-content">
+        <p class="eyebrow">Information Technology • Cybersecurity • Cloud</p>
+        <h2>Welcome to My Portfolio</h2>
+        <p>
+          I am an Information Technology student building skills in cybersecurity,
+          cloud computing, networking, and web development. My goal is to become a
+          Cloud Security Engineer and help organizations protect their technology systems.
+        </p>
+        <div class="button-row">
+          <button id="learn-more-btn" class="button" type="button" aria-controls="career-details">
+            Learn More
+          </button>
+          <a class="button button-secondary" href="projects.html">View Projects</a>
+        </div>
+        <p id="career-details" class="interactive-message" hidden>
+          I am focusing on secure cloud architecture, networking fundamentals,
+          Linux, AWS, and practical cybersecurity projects.
+        </p>
+      </div>
+      <img src="profile.jpg" alt="Portrait of Ka'Deem Lovelace" class="profile-image">
+    </section>
+
+    <section class="section-card">
+      <div class="section-heading">
+        <p class="eyebrow">Career Direction</p>
+        <h2>My Career Goals</h2>
+      </div>
+      <div class="card-grid">
+        <article class="info-card">
+          <h3>Short-Term Goals</h3>
+          <p>
+            Complete my degree, earn industry certifications such as CompTIA Security+,
+            and gain hands-on experience through technology projects.
+          </p>
+        </article>
+        <article class="info-card">
+          <h3>Long-Term Goals</h3>
+          <p>
+            Become a Cloud Security Engineer and specialize in protecting cloud
+            environments using technologies such as AWS.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-card">
+      <div class="section-heading">
+        <p class="eyebrow">Technical Growth</p>
+        <h2>Skills I Am Developing</h2>
+      </div>
+      <ul class="skill-list">
+        <li>HTML and CSS</li>
+        <li>JavaScript and DOM manipulation</li>
+        <li>Linux Command Line</li>
+        <li>Networking Fundamentals</li>
+        <li>Cybersecurity Concepts</li>
+        <li>AWS Cloud Computing</li>
+      </ul>
+    </section>
+
+    <section class="section-card api-section" aria-labelledby="github-heading">
+      <div class="section-heading">
+        <p class="eyebrow">Optional API Bonus</p>
+        <h2 id="github-heading">GitHub Profile Snapshot</h2>
+      </div>
+      <p>Use the button to load public profile data from the GitHub API.</p>
+      <button id="load-github-btn" class="button" type="button">Load GitHub Profile</button>
+      <div id="github-result" class="api-result" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Ka'Deem Lovelace | IT Portfolio</p>
+  </footer>
+</body>
+</html>
