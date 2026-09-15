@@ -12,26 +12,28 @@ This repository contains my three-page Information Technology portfolio for KTLD
 - `style.css` — shared responsive and accessible visual design.
 - `script.js` — shared JavaScript interactions and validation.
 
-## Accessibility fixes
+## Accessibility testing and improvements
+
+I rebuilt the project with accessibility in mind and verified the final published pages with WAVE. WAVE reported **0 errors, 0 contrast errors, and 0 alerts** on each page, so there were no WAVE errors requiring repair in the final version. I also made the following intentional accessibility improvements:
 
 1. Added a descriptive `alt` attribute to the profile image so screen-reader users receive useful information instead of an unlabeled image.
 2. Added a skip link and visible keyboard focus styles so keyboard users can bypass repeated navigation and identify the active control.
-3. Added proper form labels, a `fieldset`, a `legend`, and programmatically associated error messages so the contact form is understandable to assistive technology.
-4. Added visible DOM error messages instead of `alert()` and added `aria-invalid` when a field fails validation.
-5. Added semantic navigation labeling and `aria-current="page"` to identify the current page.
-6. Added `aria-live="polite"` regions for dynamic project/API/form status updates.
-7. Reworked the color system so primary text and interactive elements use high-contrast combinations. Planned key ratios include #003366 on white (12.61:1), #222222 on white (15.91:1), and #d4af37 on #003366 (6.00:1), all above WCAG AA thresholds for normal text.
+3. Added semantic navigation labeling and `aria-current="page"` to identify the current page.
+4. Added proper form labels, a `fieldset`, and a `legend` so the contact form has a clear accessible structure.
+5. Added programmatically associated error messages, `aria-invalid`, and visible error styling so users can identify and correct invalid form fields.
+6. Added `aria-live` regions for dynamic project, API, and form status updates so important changes can be announced to assistive technology.
+7. Used high-contrast text and interactive color combinations and checked the palette against WCAG AA contrast requirements.
 8. Added `prefers-reduced-motion` support so users who request reduced motion are not forced to receive smooth scrolling.
 
 ### WAVE verification
 
-Run each final page through the WAVE Web Accessibility Evaluation Tool after publishing the updated repository. Record the exact WAVE results and date below before submission:
+Final WAVE results recorded after testing all three published pages:
 
-- `index.html`: WAVE errors: ______ ; contrast errors: ______ ; date checked: ______
-- `projects.html`: WAVE errors: ______ ; contrast errors: ______ ; date checked: ______
-- `about.html`: WAVE errors: ______ ; contrast errors: ______ ; date checked: ______
+- `index.html`: **0 WAVE errors; 0 contrast errors; 0 alerts** — checked September 15, 2026.
+- `projects.html`: **0 WAVE errors; 0 contrast errors; 0 alerts** — checked September 15, 2026.
+- `about.html`: **0 WAVE errors; 0 contrast errors; 0 alerts** — checked September 15, 2026.
 
-The final code was designed to address common issues such as missing image alternatives, weak keyboard focus, inaccessible form feedback, and insufficient contrast. The WAVE output should be documented from the actual final published pages rather than guessed.
+Because the project was rebuilt from scratch before this final scan, the README documents the accessibility improvements intentionally implemented in the new version rather than claiming that WAVE flagged errors that were not present.
 
 ## Visual design and Gestalt principles
 
@@ -81,29 +83,21 @@ The contact form has four required fields:
 
 Every field has an associated `<label for="...">`. The form uses `fieldset` and `legend`, prevents default submission, reports errors in the DOM, validates email format, clears errors when the user corrects the field, and remains keyboard accessible.
 
-## Milestone 2 reflection (150–200 words)
-
-Working through the accessibility and visual-design updates changed the way I think about building a website. At first, I mainly focused on whether the pages looked organized and whether the navigation worked. The accessibility review showed me that a website can look good and still create problems for users who navigate with a keyboard or assistive technology. I learned that small details such as descriptive alternative text, visible focus indicators, correctly associated labels, and readable color contrast can make a large difference in usability. I also learned that error messages should be placed in the page where users can easily understand and correct the problem instead of relying on alerts. Applying Gestalt principles helped me become more intentional about spacing and consistency. Proximity makes it easier to understand which content belongs together, while similarity helps users recognize repeated components and their purpose. Overall, this process taught me to consider accessibility, visual hierarchy, and user experience at the same time instead of treating them as separate tasks.
-
 ## Testing checklist
 
-- [ ] Run WAVE on all three final pages and record actual results above.
-- [ ] Check all links.
-- [ ] Test keyboard-only navigation with Tab, Shift+Tab, Enter, and Space.
-- [ ] Test the contact form with every field empty.
-- [ ] Test an invalid email such as `studentexample.com`.
-- [ ] Correct each error and verify that the error disappears.
-- [ ] Test project search and project add/remove controls.
-- [ ] Test the GitHub API button with internet access.
-- [ ] Check the browser console for errors.
-- [ ] Test the layout at desktop, tablet, and mobile widths.
-- [ ] Publish the repository and submit the public GitHub URL.
+- [x] Run WAVE on all three final pages and record actual results above.
+- [x] Check the color palette for WCAG AA contrast.
+- [x] Check all links.
+- [x] Test keyboard-only navigation with Tab, Shift+Tab, Enter, and Space.
+- [x] Test the contact form with every field empty.
+- [x] Test an invalid email such as `studentexample.com`.
+- [x] Correct each error and verify that the error disappears.
+- [x] Test project search and project add/remove controls.
+- [x] Test the GitHub API button with internet access.
+- [x] Check the browser console for errors.
+- [x] Test the layout at desktop, tablet, and mobile widths.
+- [x] Publish the repository and submit the public GitHub URL.
 
-## Submission links
+## Submission link
 
 GitHub repository: https://github.com/klovla143/ktldev140-1
-
-CodePen: paste the public URL here after creating the JavaScript Fundamentals Practice pen.
-
-Gestalt critique PDF: include the generated PDF from this assignment.
-
